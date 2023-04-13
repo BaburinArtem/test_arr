@@ -18,7 +18,7 @@ namespace test_arr
             var array = Enumerable.Range(0, NumberCount).Select(_=>Random.Next(NumberStart,NumberEnd+1)).ToArray();
             array = array.OrderBy( x => x ).ToArray();
 
-            array.Select((value, index) => $"{index}:{value}").ForEach(Console.WriteLine);
+            array.Select((value, index) => $"{index, 2}:{value,2}").ForEach(Console.WriteLine);
             //Console.WriteLine(string.Join(", ",array));
             Console.ReadKey();
         }
